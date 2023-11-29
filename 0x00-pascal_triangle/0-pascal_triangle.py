@@ -5,7 +5,7 @@ def pascal_triangle(n):
 the Pascal’s triangle of n'''
     arr = []
     if n <= 0:
-        print('n must be greater than 0')
+        
         return arr
         
 
