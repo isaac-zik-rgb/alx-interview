@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""N queens puzzle
-"""
+'''N-Queens Challenge'''
+
 import sys
 
 if __name__ == '__main__':
