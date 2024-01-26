@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-"""Rotate 2D Matrix"""
+"""Rotate 2D Matrix In-Place"""
 
 
 def rotate_2d_matrix(matrix):
     """
-    Given an n x n 2D matrix, rotate it 90 degrees clockwise.
+    Given an n x n 2D matrix, rotate it 90 degrees clockwise in-place.
     """
     # Reverse the matrix
-    reversed_matrix = matrix[::-1]
+    matrix.reverse()
 
-    # Get the number of columns and rows
-    columns, rows = len(reversed_matrix), len(reversed_matrix[0])
-
-    # Create a new matrix with rotated values
-    rotated_matrix = [[reversed_matrix[i][j] for i in range(columns)] for j in range(rows)]
-
-    return rotated_matrix
-
+    # Transpose the matrix in-place
+    n = len(matrix)
+    for i in range(n):
+        for j in range(i + 1, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+            
