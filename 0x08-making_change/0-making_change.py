@@ -19,3 +19,7 @@ def makeChange(coins, total):
     if total != 0:
         return -1
     return num_coins
+"""
+[25, 1, 2,]
+6 0
+"""
